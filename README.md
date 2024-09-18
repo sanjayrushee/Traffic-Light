@@ -1,8 +1,16 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Traffic Light System in React
 
-Currently, two official plugins are available:
+This project implements a traffic light system with pedestrian crossing functionality and an optional emergency vehicle override feature using React. The system cycles through green, yellow, and red lights, and allows pedestrians to request a crossing, which interrupts the normal light cycle after the current sequence completes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Automatic Light Transitions**: Lights automatically transition from Green to Yellow to Red and back to Green.
+- **Pedestrian Button**: Pedestrians can request a red light for safe crossing.
+- **Emergency Override (Optional)**: An override button can interrupt the light cycle to allow emergency vehicles to pass.
+- **Countdown Timer**: Displays a countdown timer for each light transition.
+- **Smooth Transitions**: CSS transitions are used to smoothly change light colors.
+
+
+
+
