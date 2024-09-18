@@ -10,10 +10,10 @@ const TrafficLight = () => {
   const [timer, setTimer] = useState(10); 
   const [pedestrianRequested, setPedestrianRequested] = useState(false);
   const [emergencyOverride, setEmergencyOverride] = useState(false);
+  const [isFirstCycle, setIsFirstCycle] = useState(true); 
 
   useEffect(() => {
     let timeout;
-
     const manageLights = () => {
       switch (currentLight) {
         case 'green':
@@ -26,7 +26,8 @@ const TrafficLight = () => {
               setCurrentLight('yellow');
               setTimer(3); 
             }
-          }, 10000);
+          }, isFirstCycle ? 10000 : 7000);
+          setIsFirstCycle(false);
           break;
 
         case 'yellow':
